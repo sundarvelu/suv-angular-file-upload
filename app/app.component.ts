@@ -47,7 +47,7 @@ export class AppComponent {
   }
   
   uploadAndProgress(files: File[]){
-    console.log(files)
+    // console.log(files)
     var formData = new FormData();
     Array.from(files).forEach(f => formData.append('file',f))
     
@@ -55,7 +55,7 @@ export class AppComponent {
       .subscribe(event => {
         let resSTR = JSON.stringify(event);
     let resJSON = JSON.parse(resSTR);
-    console.log(resJSON.body);
+    // console.log(resJSON.body);
         // console.log(event.body);
         if (event.type === HttpEventType.UploadProgress) {
           this.percentDone = Math.round(100 * event.loaded / event.total);
