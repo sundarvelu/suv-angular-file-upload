@@ -3,8 +3,7 @@ import {HttpClientModule, HttpClient, HttpRequest, HttpResponse, HttpEventType} 
 
 @Component({
   selector: 'my-app',
-  template: `
-    Version = {{version.full}} <br/>
+  template: `    
     <input type="file" (change)="upload($event.target.files)" />
     Upload Percent: {{percentDone}}% <br />
     
